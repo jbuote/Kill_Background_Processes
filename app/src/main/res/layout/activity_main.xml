@@ -10,29 +10,39 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.pwbs.killbackgroundprocesses.MainActivity">
 
+    <TextView
+        android:text="@string/main_tips"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_tips"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
     <Spinner
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="41dp"
-        android:id="@+id/sp_package_name" />
+        android:id="@+id/sp_package_name"
+        android:layout_marginTop="40dp"
+        android:layout_below="@+id/tv_tips"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <Button
         android:text="Kill Background Processes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:id="@+id/btn_Kill_Process"
         android:layout_below="@+id/sp_package_name"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="99dp"
-        android:id="@+id/btn_Kill_Process" />
+        android:layout_marginTop="91dp" />
 
-    <TextView
-        android:text="TextView"
+    <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:id="@+id/et_package_name"
+        android:inputType="textNoSuggestions"
         android:layout_below="@+id/sp_package_name"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="42dp"
-        android:id="@+id/tv_package_name" />
+        android:layout_marginTop="28dp" />
 </RelativeLayout>
