@@ -1,0 +1,19 @@
+#.gitignore file for bs-android-humiditrak project as of 12/06/2016
+#
+.gradle
+/local.properties
+/.idea/workspace.xml
+/.idea/libraries
+.DS_Store
+/build
+/captures
+
+#iml files
+*.iml
+/*/*.iml
+
+#Additions for libraries
+/*/build
+/*/.idea/libraries
+/*/.idea/workspace.xml
+.idea/
