@@ -44,5 +44,15 @@
         android:inputType="textNoSuggestions"
         android:layout_below="@+id/sp_package_name"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="28dp" />
+        android:layout_marginTop="28dp"
+        android:minWidth="100dp"
+        android:hint="Enter Package Name" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="14dp"
+        android:id="@+id/tv_version" />
 </RelativeLayout>
