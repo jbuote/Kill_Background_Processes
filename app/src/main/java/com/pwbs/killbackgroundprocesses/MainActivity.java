@@ -4,7 +4,10 @@ package com.pwbs.killbackgroundprocesses;
 import android.app.Activity;
 import android.app.ActivityManager;
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -33,6 +36,8 @@ private static ArrayList<String> packageNames;
         sp_package_name = (Spinner)findViewById(R.id.sp_package_name);
         btn_kill_process = (Button)findViewById(R.id.btn_Kill_Process);
         et_package_name = (EditText)findViewById(R.id.et_package_name);
+
+        ((TextView)findViewById(R.id.tv_version)).setText("Version - " + getAppVersionName(getApplicationContext()));
 
         packageNames = getPackageNames();
 
@@ -149,5 +154,24 @@ private static ArrayList<String> packageNames;
     @Override
     protected void onDestroy() {
         super.onDestroy();
+    }
+
+
+    private static String getAppVersionName(Context context) {
+        if (context != null) {
+            PackageManager pm = context.getPackageManager();
+            if (pm != null) {
+                PackageInfo pi;
+                try {
+                    pi = pm.getPackageInfo(context.getPackageName(), 0);
+                    if (pi != null) {
+                        return pi.versionName;
+                    }
+                } catch (PackageManager.NameNotFoundException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+        return "";
     }
 }
