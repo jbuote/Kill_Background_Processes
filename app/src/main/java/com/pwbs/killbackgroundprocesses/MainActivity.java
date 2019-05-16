@@ -9,6 +9,7 @@ import android.content.DialogInterface;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
+
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
@@ -20,7 +21,7 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.ExecutionException;
+
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 private Spinner sp_package_name;
